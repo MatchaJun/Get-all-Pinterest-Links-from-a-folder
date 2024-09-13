@@ -4,7 +4,7 @@
 2. Acesse a pasta do Pinterest de onde deseja obter todos os links.
 3. Pressione `CTRL + SHIFT + I`, ou clique com o botão direito do mouse e selecione "Inspecionar".
 4. Abra o **Console** na aba de **Inspecionar**.
-5. Certifique-se de estar no topo da página do Pinterest e aguarde o carregamento.
+5. Certifique-se de estar no topo da página do Pinterest e aguarde a pagina carregar um pouco.
 6. Cole o código no **Console**.
 7. Caso seja sua primeira vez utilizando o **Console**, você precisará confirmar digitando um texto.
 8. Pronto!
