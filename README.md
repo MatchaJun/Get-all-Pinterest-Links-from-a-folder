@@ -1,6 +1,6 @@
 Como usar: 
 
-1. Copie o código do arquivo "Code";
+1.Copie o código do arquivo "Code";
 
 2.Entre em uma pasta do Pinterest que deseje pegar todos os links;
 
