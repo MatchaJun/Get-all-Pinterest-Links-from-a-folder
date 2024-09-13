@@ -8,7 +8,7 @@ Como usar:
 
 4. Abra o console na aba de Inspecionar;
 
-5. Esteja no topo da página, e espere a página carregar um pouco;
+5. Esteja no topo da página do Pinterest, e espere a página carregar um pouco;
 
 6. Cole o código no Console;
 
