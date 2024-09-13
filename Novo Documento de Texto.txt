@@ -1,84 +1,80 @@
-// Armazena os links das páginas do Pinterest que já foram coletados
+//Armazena os links das páginas do Pinterest que já foram coletados
 let collectedMediaLinks = new Set(); 
 
-// Função para rolar uma pequena parte da página
+//Função para rolar uma pequena parte da página
 function scrollStep() {
     return new Promise((resolve) => {
         let distance = 500; // Distância para cada rolagem
-        window.scrollBy(0, distance); // Faz a rolagem
+        window.scrollBy(0, distance); //Faz a rolagem
         setTimeout(() => {
-            resolve(); // Espera o conteúdo carregar antes de continuar
-        }, 500); // Intervalo de 500ms para dar tempo de carregar novas imagens e vídeos
+            resolve(); //Espera o conteúdo carregar antes de continuar
+        }, 500); //Intervalo de 500ms para dar tempo de carregar novas imagens e vídeos
     });
 }
 
-// Função para coletar os links das páginas de imagens e vídeos visíveis sem duplicatas dentro do container da pasta
+//Função para coletar os links das páginas de imagens e vídeos visíveis sem duplicatas dentro do container da pasta
 function collectNewMediaLinks() {
-    // Tentamos encontrar o container usando diferentes seletores
+    //Tentamos encontrar o container usando diferentes seletores
     let container = document.querySelector("#__PWS_ROOT__ > div > div:nth-child(1) > div > div.appContent > div > div > div > div.fma.zI7.iyn.Hsu > div.XiG.Zr3.zI7.iyn.Hsu > div > div.masonryContainer") ||
                     document.querySelector("#__PWS_ROOT__ > div > div:nth-child(1) > div > div.appContent > div > div > div > div.fma.zI7.iyn.Hsu > div.XiG.Zr3.zI7.iyn.Hsu > div > div:nth-child(1)");
 
-    // Se o container for encontrado
+    //Se o container for encontrado
     if (container) {
-        // Coleta todos os links dentro do container
+        //Coleta todos os links dentro do container
         let links = container.querySelectorAll('a'); // Seleciona todos os links dentro do container
         let newLinkCount = 0;
         
         links.forEach(link => {
             let linkUrl = link.href;
             
-            // Verifica se o link leva a uma página do Pinterest e não contém 'search'
+            //Verifica se o link leva a uma página do Pinterest e não contém 'search'
             if (linkUrl && !linkUrl.includes('search') && linkUrl.includes('pin')) {
                 // Se o link ainda não foi coletado, adiciona ao conjunto
                 if (!collectedMediaLinks.has(linkUrl)) {
                     collectedMediaLinks.add(linkUrl);
-                    newLinkCount++; // Conta quantos novos links foram coletados
+                    newLinkCount++; 
                 }
             }
         });
 
-        return newLinkCount; // Retorna o número de novos links coletados
+        return newLinkCount; //Retorna o número de novos links coletados
     }
-    return 0; // Retorna 0 se o container não for encontrado
+    return 0; 
 }
 
-// Função principal para rolar e coletar os links das páginas de imagens e vídeos em etapas
+//Coleta os links das páginas de imagens e vídeos 
 async function getAllPinterestMediaLinks() {
     let previousScrollHeight = 0;
     let currentScrollHeight = document.body.scrollHeight;
     let noNewLinksLoaded = false;
 
-    // Continuar até o fim da pasta ou até não haver mais novos links
+    //Continuar até o fim da pasta ou até não haver mais novos links
     while (!noNewLinksLoaded) {
-        await scrollStep(); // Rola um pouco
+        await scrollStep();
 
-        let newLinks = collectNewMediaLinks(); // Coleta os novos links dentro do container da pasta
+        //Coleta os novos links dentro do container da pasta
+        let newLinks = collectNewMediaLinks();
 
-        // Atualiza a altura da página e verifica se novos links foram carregados
+        //Atualiza a altura da página e verifica se novos links foram carregados
         previousScrollHeight = currentScrollHeight;
         currentScrollHeight = document.body.scrollHeight;
 
-        // Se não há mais novos links nem aumento da altura da página, finaliza
+        //Se não há mais novos links nem aumento da altura da página, finaliza
         if (newLinks === 0 && previousScrollHeight === currentScrollHeight) {
             noNewLinksLoaded = true;
         }
     }
 
-    // Converte o Set em array e cria uma string com cada link em uma nova linha
-    let allMediaLinksArray = Array.from(collectedMediaLinks); // Converte para array
-    let allMediaLinksString = allMediaLinksArray.join('\n'); // Junta os links em uma string, separados por nova linha
+    //Converte o Set em array e cria uma string com cada link em uma nova linha
+    let allMediaLinksArray = Array.from(collectedMediaLinks); 
+    let allMediaLinksString = allMediaLinksArray.join('\n'); 
 
-    // Imprime a string toda de uma vez
-    console.log(allMediaLinksString); // Exibe todos os links separados por nova linha no console
+    //Exibe todos os links separados por nova linha no console
+    console.log(allMediaLinksString); 
 
-    // Exibe a contagem total de links coletados
-    console.log(`Total de links coletados: ${allMediaLinksArray.length}`); // Imprime a quantidade total de links
-
-    // Copia a lista completa para a área de transferência (opcional)
-    // navigator.clipboard.writeText(allMediaLinksString).then(() => {
-    //     console.log('Links copiados para a área de transferência');
-    // });
+    //Exibe a contagem total de links coletados
+    console.log(`Total de links coletados: ${allMediaLinksArray.length}`); 
 }
 
-// Executa a função
+//Executa a função
 getAllPinterestMediaLinks();
