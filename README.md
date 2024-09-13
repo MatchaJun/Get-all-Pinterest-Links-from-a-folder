@@ -12,6 +12,6 @@ Como usar:
 
 6. Cole o código no Console;
 
-7.Caso seja sua primeira vez usando o Console, ele vai pedir para você digitar um texto para poder usá-lo;
+7. Caso seja sua primeira vez usando o Console, ele vai pedir para você digitar um texto para poder usá-lo;
 
 8. Pronto!
