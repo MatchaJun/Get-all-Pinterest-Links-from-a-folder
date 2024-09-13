@@ -1,17 +1,23 @@
-Como usar: 
+## Como Usar
 
-1. Copie o código do arquivo "Code";
-
-2. Entre em uma pasta do Pinterest que deseje pegar todos os links;
-
-3. Aperte CTRL + SHIFT + I, ou aperte com botão direito do mouse e vá para "Inspecionar";
-
-4. Abra o console na aba de Inspecionar;
-
-5. Esteja no topo da página do Pinterest, e espere a página carregar um pouco;
-
-6. Cole o código no Console;
-
-7. Caso seja sua primeira vez usando o Console, ele vai pedir para você digitar um texto para poder usá-lo;
-
+1. Copie o código do arquivo `Code`.
+2. Acesse a pasta do Pinterest de onde deseja obter todos os links.
+3. Pressione `CTRL + SHIFT + I`, ou clique com o botão direito do mouse e selecione "Inspecionar".
+4. Abra o **Console** na aba de **Inspecionar**.
+5. Certifique-se de estar no topo da página do Pinterest e aguarde o carregamento.
+6. Cole o código no **Console**.
+7. Caso seja sua primeira vez utilizando o **Console**, você precisará confirmar digitando um texto.
 8. Pronto!
+
+---
+
+## How to Use
+
+1. Copy the code from the `Code` file.
+2. Go to the Pinterest board from which you want to retrieve all the links.
+3. Press `CTRL + SHIFT + I`, or right-click and select "Inspect".
+4. Open the **Console** tab in the **Inspect** section.
+5. Make sure you are at the top of the Pinterest page and wait for it to load.
+6. Paste the code into the **Console**.
+7. If this is your first time using the **Console**, you will need to type in a confirmation message.
+8. Done!
