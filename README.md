@@ -6,7 +6,7 @@
 4. Abra o **Console** na aba de **Inspecionar**.
 5. Certifique-se de estar no topo da página do Pinterest e aguarde a página carregar um pouco.
 6. Cole o código no **Console** e pressione `Enter`.
-7. Caso seja sua primeira vez utilizando o **Console**, você precisará confirmar digitando um texto.
+7. Caso seja sua primeira vez utilizando o **Console**, você precisará confirmar digitando `allow pasting`.
 8. Pronto!
 
 ---
@@ -25,7 +25,7 @@ Este código foi criado para ajudar a referenciar imagens de uma pasta específi
 4. Open the **Console** tab in the **Inspect** section.
 5. Make sure you are at the top of the Pinterest page and wait for it to load.
 6. Paste the code into the **Console** and press `Enter`.
-7. If this is your first time using the **Console**, you will need to type in a confirmation message.
+7. If this is your first time using the **Console**, you will need to type `allow pasting` to confirm.
 8. Done!
 
 ---
