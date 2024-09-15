@@ -11,6 +11,12 @@
 
 ---
 
+## Por quê?
+
+Este código foi criado para ajudar a referenciar imagens de uma pasta específica do Pinterest de forma rápida e eficiente. Ao coletar todos os links das imagens, você pode organizar, catalogar e referenciar os conteúdos de maneira mais prática, facilitando o acesso e o uso de imagens para projetos ou pesquisas.
+
+---
+
 ## How to Use
 
 1. Copy the code from the `Code` file.
@@ -21,12 +27,6 @@
 6. Paste the code into the **Console** and press `Enter`.
 7. If this is your first time using the **Console**, you will need to type in a confirmation message.
 8. Done!
-
----
-
-## Por quê?
-
-Este código foi criado para ajudar a referenciar imagens de uma pasta específica do Pinterest de forma rápida e eficiente. Ao coletar todos os links das imagens, você pode organizar, catalogar e referenciar os conteúdos de maneira mais prática, facilitando o acesso e o uso de imagens para projetos ou pesquisas.
 
 ---
 
