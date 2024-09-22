@@ -16,7 +16,7 @@ function scrollStep() {
 function collectNewMediaLinks() {
     //Tentamos encontrar o container usando diferentes seletores
     let container = document.querySelector("#__PWS_ROOT__ > div > div:nth-child(1) > div > div.appContent > div > div > div > div.fma.zI7.iyn.Hsu > div.XiG.Zr3.zI7.iyn.Hsu > div > div.masonryContainer") ||
-                    document.querySelector("#__PWS_ROOT__ > div > div:nth-child(1) > div > div.appContent > div > div > div > div.fma.zI7.iyn.Hsu > div.XiG.Zr3.zI7.iyn.Hsu > div > div:nth-child(1)");
+                    document.querySelector("#__PWS_ROOT__ > div > div:nth-child(1) > div > div.appContent > div > div > div > div.fma.zI7.iyn.Hsu > div.XiG.lnZ.zI7.iyn.Hsu > div > div.masonryContainer > div > div > div > div:nth-child(1)");
 
     //Se o container for encontrado
     if (container) {
